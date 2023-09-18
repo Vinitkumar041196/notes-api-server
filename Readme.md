@@ -1,6 +1,6 @@
 # To build the image
 
-RUN
+Run the following command from root directory of the project
 ```
 docker build -t notes-api-server .
 ```
