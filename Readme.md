@@ -29,4 +29,5 @@ Or you can set the required environment variables and run the following command
 go run ./cmd/main.go
 ```
 
-
+# Notes
+Postman collection is provided in the ./postman_collection folder. The json file is to be imported in postman application to test the server
