@@ -1,0 +1,22 @@
+---
+version: '3.3'
+services:  
+  notes:
+    container_name: notes-api-server
+    # image: vinitondocker/notes-api-server
+    image: golang:alpine3.16
+    command: /bin/sh ./deployment/dev.sh
+    working_dir: /go/src/notes-api-server
+    volumes:
+      - ./:/go/src/notes-api-server
+      
+    ports:
+      - "0.0.0.0:8080:8080"
+    dns:
+      - 8.8.8.8
+    environment:
+      - APP_ENV=development
+      - SERVER_ADDRESS=0.0.0.0:8080
+      - ENABLE_TLS=false #to enable ssl/tls
+      - SSL_CRT_PATH="path to ssl cert file" #required when ENABLE_TLS is true
+      - SSL_KEY_PATH="path to ssl key file" #required when ENABLE_TLS is true
