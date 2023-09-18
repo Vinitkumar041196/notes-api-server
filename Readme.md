@@ -22,3 +22,9 @@ You can use the sample docker-compose.yml file
 docker-compose up -d
 ```
 
+Or you can set the required environment variables and run the following command
+```
+go run ./cmd/main.go
+```
+
+

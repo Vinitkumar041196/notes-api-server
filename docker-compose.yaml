@@ -3,13 +3,7 @@ version: '3.3'
 services:  
   notes:
     container_name: notes-api-server
-    # image: vinitondocker/notes-api-server
-    image: golang:alpine3.16
-    command: /bin/sh ./deployment/dev.sh
-    working_dir: /go/src/notes-api-server
-    volumes:
-      - ./:/go/src/notes-api-server
-      
+    image: vinitondocker/notes-api-server
     ports:
       - "0.0.0.0:8080:8080"
     dns:
